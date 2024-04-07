@@ -4,6 +4,7 @@ using ContactsList.Server.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContactsList.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240404174719_dodanieuzytkownikowpoczatkowych")]
+    partial class dodanieuzytkownikowpoczatkowych
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,6 +81,7 @@ namespace ContactsList.Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SubcategoryId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("Surname")
@@ -114,18 +118,18 @@ namespace ContactsList.Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2a1783ab-e219-42ac-884b-7a98821b5719",
+                            Id = "d6933779-ba12-4eb3-8be4-57c67d6e00fe",
                             AccessFailedCount = 0,
-                            BirthDate = new DateTime(2024, 4, 7, 22, 2, 46, 301, DateTimeKind.Local).AddTicks(7826),
+                            BirthDate = new DateTime(2024, 4, 4, 19, 47, 19, 140, DateTimeKind.Local).AddTicks(9359),
                             CategoryId = 1,
-                            ConcurrencyStamp = "b69485b3-fab7-4e36-a2dd-260a2cd93138",
+                            ConcurrencyStamp = "cd393682-8eb2-4eda-906e-31845bb46b71",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             Name = "Alexander",
                             NormalizedEmail = "admin@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "WE1XFwbR/yp+7/5YTukbNQ==;xqNq7FAdR4nTg5ngS46RZ9PtuusJ9ROJ3uiTcYMX6vQ=",
+                            PasswordHash = "lTEKq5Fj5y+o65oNiD5ZLA==;VwZ51sh51wK2ik2sH12DSUF60zNfRbubCC0zA2A59IY=",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             SubcategoryId = 1,
@@ -135,63 +139,63 @@ namespace ContactsList.Server.Migrations
                         },
                         new
                         {
-                            Id = "1932721d-9553-49fe-ab42-70d42e375ef8",
+                            Id = "2aafaa9c-4cf6-43e9-b35e-f6a28a48744c",
                             AccessFailedCount = 0,
-                            BirthDate = new DateTime(2024, 4, 7, 22, 2, 46, 302, DateTimeKind.Local).AddTicks(7125),
-                            CategoryId = 2,
-                            ConcurrencyStamp = "4e56f52f-4248-4db7-84b4-d81af21de70a",
+                            BirthDate = new DateTime(2024, 4, 4, 19, 47, 19, 141, DateTimeKind.Local).AddTicks(9007),
+                            CategoryId = 1,
+                            ConcurrencyStamp = "24bdb25b-ccd7-4544-a1c4-263a5d8d90c2",
                             Email = "user1@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             Name = "Phoenix",
                             NormalizedEmail = "user1@gmail.com",
                             NormalizedUserName = "user1",
-                            PasswordHash = "SAIS/BUANt69JTMv2dN00w==;rShpiB0BrTa5nE84tfvlJMAi7/5d7qngEocM828ZuRo=",
+                            PasswordHash = "7oGRWM1/J+I9aXgYWYrv7g==;ouDeSYqEwzZ+W8HwZQBgNf1+XieV3pWtOVAo5K6AOb0=",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
-                            SubcategoryId = 5,
+                            SubcategoryId = 1,
                             Surname = "Elliott",
                             TwoFactorEnabled = false,
                             UserName = "user1"
                         },
                         new
                         {
-                            Id = "489baa6a-313b-41ef-a817-f93035b4145e",
+                            Id = "f24dd81f-3d54-4764-9ce4-ddd06bc65875",
                             AccessFailedCount = 0,
-                            BirthDate = new DateTime(2024, 4, 7, 22, 2, 46, 303, DateTimeKind.Local).AddTicks(5580),
-                            CategoryId = 2,
-                            ConcurrencyStamp = "1cf5185b-46a4-4359-b883-8121deec7b56",
+                            BirthDate = new DateTime(2024, 4, 4, 19, 47, 19, 142, DateTimeKind.Local).AddTicks(7503),
+                            CategoryId = 1,
+                            ConcurrencyStamp = "1c60b205-bf95-47a5-8940-c5b159348a40",
                             Email = "user2@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             Name = "Christin",
                             NormalizedEmail = "user2@gmail.com",
                             NormalizedUserName = "user2",
-                            PasswordHash = "smHu4GgRtZgqnWHr75+3Cw==;6dKGKswBxFx9n7WaglGT7jFk82UyiKtQilvNmb0Xcck=",
+                            PasswordHash = "joyoSq973MsZmMHn65FgVQ==;7nAPJN6BIa8w9jqF7eBxfpNLx9m3Rtvpb0EPOgKiWMs=",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
-                            SubcategoryId = 4,
+                            SubcategoryId = 1,
                             Surname = "Cavanaugh",
                             TwoFactorEnabled = false,
                             UserName = "user2"
                         },
                         new
                         {
-                            Id = "1bde2c03-39c7-40e1-9c24-afe0a3dc3c29",
+                            Id = "2f5b4bec-351f-4b25-a597-d0a9ac009557",
                             AccessFailedCount = 0,
-                            BirthDate = new DateTime(2024, 4, 7, 22, 2, 46, 304, DateTimeKind.Local).AddTicks(3928),
+                            BirthDate = new DateTime(2024, 4, 4, 19, 47, 19, 143, DateTimeKind.Local).AddTicks(6002),
                             CategoryId = 1,
-                            ConcurrencyStamp = "632666bd-259b-4b09-aaee-2a568a8bd01a",
+                            ConcurrencyStamp = "475799f0-9ea7-4e39-a24a-d233457f0eed",
                             Email = "user3@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             Name = "Rafael",
                             NormalizedEmail = "user3@gmail.com",
                             NormalizedUserName = "user3",
-                            PasswordHash = "wP+1xT9gccbBp3DJTPTJqA==;mBpjZ3ZPvzv38BYXvfI6IsTYs4a6uzaJU50tbmhAdY8=",
+                            PasswordHash = "+iye0s+0WxArvw5kXTFlHw==;kD7Gp36jrCswZfBizTAsglp52o4rfSPDK5SGhXG3W6E=",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
-                            SubcategoryId = 3,
+                            SubcategoryId = 1,
                             Surname = "Weiner",
                             TwoFactorEnabled = false,
                             UserName = "user3"
@@ -277,13 +281,13 @@ namespace ContactsList.Server.Migrations
                         {
                             Id = 4,
                             CategoryId = 2,
-                            Name = "Osobisty"
+                            Name = "Domowy"
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 2,
-                            Name = "Rodzinny"
+                            Name = "Przenośny"
                         });
                 });
 
@@ -316,13 +320,13 @@ namespace ContactsList.Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5bf76c93-fe7e-4afc-acc7-f3425fb099fb",
+                            Id = "1239df5f-ad85-4253-ac3e-cd7c735cba80",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "0874ee7d-86ad-4d83-847a-815245877fcb",
+                            Id = "a5b2ed4e-78e1-45e7-b305-1764281f2aba",
                             Name = "user",
                             NormalizedName = "user"
                         });
@@ -417,23 +421,23 @@ namespace ContactsList.Server.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "2a1783ab-e219-42ac-884b-7a98821b5719",
-                            RoleId = "5bf76c93-fe7e-4afc-acc7-f3425fb099fb"
+                            UserId = "d6933779-ba12-4eb3-8be4-57c67d6e00fe",
+                            RoleId = "1239df5f-ad85-4253-ac3e-cd7c735cba80"
                         },
                         new
                         {
-                            UserId = "1932721d-9553-49fe-ab42-70d42e375ef8",
-                            RoleId = "0874ee7d-86ad-4d83-847a-815245877fcb"
+                            UserId = "2aafaa9c-4cf6-43e9-b35e-f6a28a48744c",
+                            RoleId = "a5b2ed4e-78e1-45e7-b305-1764281f2aba"
                         },
                         new
                         {
-                            UserId = "489baa6a-313b-41ef-a817-f93035b4145e",
-                            RoleId = "0874ee7d-86ad-4d83-847a-815245877fcb"
+                            UserId = "f24dd81f-3d54-4764-9ce4-ddd06bc65875",
+                            RoleId = "a5b2ed4e-78e1-45e7-b305-1764281f2aba"
                         },
                         new
                         {
-                            UserId = "1bde2c03-39c7-40e1-9c24-afe0a3dc3c29",
-                            RoleId = "0874ee7d-86ad-4d83-847a-815245877fcb"
+                            UserId = "2f5b4bec-351f-4b25-a597-d0a9ac009557",
+                            RoleId = "a5b2ed4e-78e1-45e7-b305-1764281f2aba"
                         });
                 });
 
@@ -467,7 +471,8 @@ namespace ContactsList.Server.Migrations
                     b.HasOne("ContactsList.Server.Model.Subcategory", "Subcategory")
                         .WithMany()
                         .HasForeignKey("SubcategoryId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Category");
 

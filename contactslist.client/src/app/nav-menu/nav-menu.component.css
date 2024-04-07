@@ -1,0 +1,17 @@
+.nav-menu {
+    background-color: darkgrey; 
+    color: white; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+  }
+  
+.mat-icon {
+  position: relative;
+  top: 4px;
+}
+.button {
+  align-items: center;
+}

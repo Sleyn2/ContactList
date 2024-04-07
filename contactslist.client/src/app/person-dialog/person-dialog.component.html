@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>{{mode}} Person</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [(ngModel)]="person.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Surname</mat-label>
+    <input matInput type="text" [(ngModel)]="person.surname">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="email" [(ngModel)]="person.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="person.PasswordHash">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <mat-select [(ngModel)]="person.categoryId" (ngModelChange)="onCategoryChange()">
+      <mat-option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Subcategory</mat-label>
+    <mat-select [(ngModel)]="person.subcategoryId">
+      <mat-option *ngFor="let subcategory of filteredSubcategories" [value]="subcategory.id">{{ subcategory.name
+        }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Birth Date</mat-label>
+    <input matInput type="date" [(ngModel)]="person.birthDate" [value]="date">
+  </mat-form-field>
+  <mat-form-field *ngIf="newSubcategory">
+    <mat-label>New Subcategory</mat-label>
+    <input matInput type="text" [(ngModel)]="newSubcategoryName">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div style="color: red;" *ngIf="errorFlag">Wrong user data</div>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="save()">Save</button>
+</mat-dialog-actions>

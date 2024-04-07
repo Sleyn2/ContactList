@@ -1,0 +1,6 @@
+<div class="nav-menu" id="header">
+    <span><mat-icon>person</mat-icon>Contacts application</span>
+    <button *ngIf="">Details</button>
+    <button mat-raised-button (click)="openDialog()" *ngIf="!signedIn">Sign in</button>
+    <button mat-raised-button (click)="logout()" *ngIf="signedIn">Sign out</button>
+</div>

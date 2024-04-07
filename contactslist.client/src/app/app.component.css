@@ -1,22 +1,14 @@
-﻿:host {
-    max-width: 1280px;
-    padding: 2rem;
-    text-align: center;
+﻿body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
 }
 
-tr:nth-child(even) {
-    background: #F2F2F2;
+.basic-container {
+  padding: 30px;
+  height: 75vh;
 }
 
-tr:nth-child(odd) {
-    background: #FFF;
-}
-
-th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-table {
-    margin: 0 auto;
+.version-info {
+  font-size: 8pt;
+  float: right;
 }

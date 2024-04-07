@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Hi</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Write your email address</mat-label>
+    <input matInput type="email" [(ngModel)]="loginData.email">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field>
+    <mat-label>Write your password</mat-label>
+    <input matInput type="password" [(ngModel)]="loginData.password">
+  </mat-form-field>
+  <div style="color: red;" *ngIf="errorFlag">Wrong Email or password</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="login()">Login</button>
+</mat-dialog-actions>
